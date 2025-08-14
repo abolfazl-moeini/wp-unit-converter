@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="tests/bootstrap.php"
+        backupGlobals="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        verbose="true"
+>
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory suffix=".php">./tests</directory>
+
+            <exclude>./tests/Module/sample-template.php</exclude>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+
+    <php>
+        <includePath>.</includePath>
+        <env name="WP_TESTS_DIR" value="{path-to-wp-dev-repo}/tests/phpunit"/>
+    </php>
+
+</phpunit>

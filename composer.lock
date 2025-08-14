@@ -1,0 +1,88 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8e29bd8fbbcea8520a8c499f88f51d59",
+    "packages": [
+        {
+            "name": "betterstudio/core-essentials",
+            "version": "1.0.8",
+            "dist": {
+                "type": "path",
+                "url": "packages/core-essentials",
+                "reference": "e9bf2a1459e845a991e5624892a2bc5e8794df0d"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "betterstudio/http-utils": "^1.0",
+                "betterstudio/plugin-core-test": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BetterStudio\\Core\\Module\\": "./src/Module"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BetterStudioTest\\Core\\Module\\": "./tests/Module"
+                }
+            },
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            }
+        },
+        {
+            "name": "betterstudio/shortcodes",
+            "version": "1.0.2",
+            "dist": {
+                "type": "path",
+                "url": "packages/shortcode",
+                "reference": "88333ab1c463899a03bef2811d408c3eb0883bbf"
+            },
+            "require": {
+                "betterstudio/core-essentials": "^1.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "betterstudio/plugin-core-test": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BetterStudio\\Core\\Shortcodes\\": "./src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BetterStudioTest\\Core\\Shortcodes\\": "./tests/"
+                }
+            },
+            "description": "Wrapper library to work with shortcodes.",
+            "homepage": "https://gitlab.com/better-projects/libraries/core/shortcode.git",
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.4"
+    },
+    "platform-dev": {},
+    "platform-overrides": {
+        "php": "7.4"
+    },
+    "plugin-api-version": "2.6.0"
+}

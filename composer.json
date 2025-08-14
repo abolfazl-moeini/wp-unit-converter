@@ -1,0 +1,30 @@
+{
+  "name": "wpdev/unit-converter",
+  "type": "wp-plugin",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=7.4",
+    "betterstudio/shortcodes": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UnitConverter\\": "./src/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/*",
+      "options": {
+        "monorepo": true,
+        "symlink": false
+      }
+    }
+  ],
+  "optimize-autoloader": true
+}

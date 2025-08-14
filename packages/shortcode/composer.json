@@ -1,0 +1,27 @@
+{
+  "name": "betterstudio/shortcodes",
+  "description": "Wrapper library to work with shortcodes.",
+  "homepage": "https://gitlab.com/better-projects/libraries/core/shortcode.git",
+  "type": "library",
+  "version": "1.0.2",
+  "repositories": [
+  ],
+  "require": {
+    "php": ">=7.0",
+    "betterstudio/core-essentials": "^1.0"
+  },
+  "require-dev": {
+    "betterstudio/plugin-core-test": "^1.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BetterStudioTest\\Core\\Shortcodes\\": "./tests/"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "BetterStudio\\Core\\Shortcodes\\": "./src/"
+    }
+  },
+  "optimize-autoloader": true
+}
