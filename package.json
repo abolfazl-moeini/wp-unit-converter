@@ -1,27 +1,28 @@
 {
   "name": "@company/project",
-  "version": "{Project Version}",
-  "description": "{Project Description}",
+  "version": "1.0.0",
+  "description": "A modern unit converter WordPress widget.",
   "license": "{Project License}",
   "author": {
-    "name": "{AuthorName}",
-    "email": "{AuthorEmail}",
-    "url": "{AuthorURL}"
+    "name": "Moeini",
+    "url": "wpdev.ir"
   },
   "type": "module",
   "keywords": [
-    "{keyword}"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abolfazl-moeini/wp-plugin-starter-kit"
+    "url": "git+https://github.com/abolfazl-moeini/wp-unit-converter"
   },
   "bugs": {
-    "url": "https://github.com/abolfazl-moeini/wp-plugin-starter-kit/issues"
+    "url": "https://github.com/abolfazl-moeini/wp-unit-converter/issues"
   },
-  "homepage": "https://github.com/abolfazl-moeini/wp-plugin-starter-kit#readme",
+  "homepage": "https://github.com/abolfazl-moeini/wp-unit-converter#readme",
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm-run-all --parallel build:components build:dependencies build:pckages build:assets",
+    "build:components": "node dev/esbuild-components.js",
+    "build:dependencies": "node dev/esbuild-dependencies.js",
+    "build:pckages": "npm run build --workspaces --if-present",
     "build:assets": "node build/build-assets.js",
     "test": "jest",
     "lint": "npm run lint --workspaces --if-present",
