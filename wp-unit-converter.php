@@ -10,7 +10,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-require __DIR__ . '/src/functions/template-functions.php';
-require __DIR__ . '/src/functions/helper-functions.php';
+require __DIR__ . '/wp-unit-converter-plugin.php';
+require __DIR__ . '/src/helper-functions.php';
 
-( new UnitConverter\PluginSetup() )->init();
+( new WPUnitConverterPlugin() )->init();
